@@ -23,16 +23,16 @@ elementweb:
 dendrite:
   dendrite_config:
     global:
-      server_name: matrix.khuedoan.com
+      server_name: matrix.flamorz.com
   ingress:
     enabled: true
     className: nginx
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
-    hostName: matrix.khuedoan.com
+    hostName: matrix.flamorz.com
     tls:
       - hosts:
-          - matrix.khuedoan.com
+          - matrix.flamorz.com
         secretName: matrix-tls-certificate
   postgresql:
     enabled: true

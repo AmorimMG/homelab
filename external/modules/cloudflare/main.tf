@@ -1,5 +1,5 @@
 data "cloudflare_zone" "zone" {
-  name = "127-0-0-1.nip.io"
+  name = "flamorz.com"
 }
 
 data "cloudflare_api_token_permission_groups" "all" {}
