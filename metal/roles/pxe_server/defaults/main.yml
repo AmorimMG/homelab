@@ -1,4 +1,4 @@
-iso_url: "https://releases.ubuntu.com/24.04.1/ubuntu-24.04.1-live-server-amd64.iso"
+iso_url: "https://old-releases.ubuntu.com/releases/24.04.1/ubuntu-24.04.1-live-server-amd64.iso"
 iso_checksum: "sha256:e240e4b801f7bb68c20d1356b60968ad0c33a41d00d828e74ceb3364a0317be9"
 ubuntu_24041_initrd_url: "https://github.com/netbootxyz/ubuntu-squash/releases/download/24.04.1-dac09526/initrd"
 ubuntu_24041_initrd_checksum: "sha256:8662504e585e4ac99423d34656face0a8d1872573460ff1727794bf8a09ec75b"
