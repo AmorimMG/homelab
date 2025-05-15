@@ -16,7 +16,7 @@ app-template:
             - name: PUID
               value: "1000"
             - name: TZ
-              value: Asia/Shanghai
+              value: America/Sao_Paulo
             - name: CUSTOM_USER
               value: casey
             - name: START_DOCKER
@@ -47,7 +47,7 @@ app-template:
       enabled: true
       className: tailscale
       hosts:
-        - host: &host webtop.west-beta.ts.net
+        - host: &host webtop.flamorz.com
           paths:
             - path: /
               pathType: Prefix

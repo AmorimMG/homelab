@@ -12,4 +12,4 @@ spec:
   ingressClassName: tailscale
   tls:
     - hosts:
-        - transmission.west-beta.ts.net
+        - transmission.flamorz.com

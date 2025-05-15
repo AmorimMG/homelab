@@ -99,7 +99,7 @@ app-template:
       enabled: true
       className: tailscale
       hosts:
-        - host: &jellyfinHost jellyfin.west-beta.ts.net
+        - host: &jellyfinHost jellyfin.flamorz.com
           paths:
             - path: /
               pathType: Prefix

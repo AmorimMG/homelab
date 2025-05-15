@@ -13,7 +13,7 @@ gitea:
     annotations:
       tailscale.com/experimental-forward-cluster-traffic-via-ingress: "true"
     hosts:
-      - host: &host git.west-beta.ts.net
+      - host: &host git.flamorz.com
         paths:
           - path: /
             pathType: Prefix
@@ -26,7 +26,7 @@ gitea:
     config:
       server:
         LANDING_PAGE: explore
-        ROOT_URL: https://git.west-beta.ts.net
+        ROOT_URL: https://git.flamorz.com
         OFFLINE_MODE: true
       repository:
         DISABLED_REPO_UNITS: repo.wiki,repo.projects,repo.packages

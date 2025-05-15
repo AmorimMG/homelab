@@ -107,11 +107,11 @@ rook-ceph-cluster:
   ingress:
     dashboard:
       host:
-        name: rook-ceph-dashboard.west-beta.ts.net
+        name: rook-ceph-dashboard.flamorz.com
         path: "/"
       tls:
         - hosts:
-            - rook-ceph-dashboard.west-beta.ts.net
+            - rook-ceph-dashboard.flamorz.com
       ingressClassName: tailscale
   toolbox:
     enabled: true

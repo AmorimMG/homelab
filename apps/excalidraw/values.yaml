@@ -34,7 +34,7 @@ app-template:
       annotations:
         tailscale.com/funnel: "true"
       hosts:
-        - host: &host draw.west-beta.ts.net
+        - host: &host draw.flamorz.com
           paths:
             - path: /
               pathType: Prefix

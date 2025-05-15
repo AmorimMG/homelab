@@ -3,7 +3,7 @@ zot:
     enabled: true
     className: tailscale
     hosts:
-      - host: &host registry.west-beta.ts.net
+      - host: &host registry.flamorz.com
         paths:
           - path: /
     tls:

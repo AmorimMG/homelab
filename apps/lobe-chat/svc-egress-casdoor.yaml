@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    tailscale.com/tailnet-fqdn: casdoor.west-beta.ts.net
+    tailscale.com/tailnet-fqdn: casdoor.flamorz.com
   name: egress-casdoor
 spec:
   externalName: unused

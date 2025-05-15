@@ -79,7 +79,7 @@ cat export.sql | psql -U postgres
 
 ### 7. 修改 TTRss 供稿设置
 
-登录 TTRss 域名: `ttrss.west-beta.ts.net`, 进入: **偏好设置** -> **供稿设置** -> 逐一查看, 将**URL**为 `https://rss.ewhisper.cn...` 修改为: `https://rss.west-beta.ts.net...`
+登录 TTRss 域名: `ttrss.flamorz.com`, 进入: **偏好设置** -> **供稿设置** -> 逐一查看, 将**URL**为 `https://rss.ewhisper.cn...` 修改为: `https://rss.flamorz.com...`
 
 ### 8. 验证
 

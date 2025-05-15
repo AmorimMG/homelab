@@ -1,7 +1,7 @@
 kured:
   configuration:
     annotateNodes: true
-    timeZone: Asia/Shanghai
+    timeZone: America/Sao_Paulo
   metrics:
     create: true
     labels:

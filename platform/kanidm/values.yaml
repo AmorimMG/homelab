@@ -39,8 +39,8 @@ app-template:
           db_path = "/data/kanidm.db"
           tls_chain = "/data/ca.crt"
           tls_key = "/data/tls.key"
-          domain = "auth.west-beta.ts.net"
-          origin = "https://auth.west-beta.ts.net"
+          domain = "auth.flamorz.com"
+          origin = "https://auth.flamorz.com"
   service:
     main:
       controller: main
@@ -59,7 +59,7 @@ app-template:
       annotations:
         tailscale.com/experimental-forward-cluster-traffic-via-ingress: "true"
       hosts:
-        - host: &host auth.west-beta.ts.net
+        - host: &host auth.flamorz.com
           paths:
             - path: /
               pathType: Prefix

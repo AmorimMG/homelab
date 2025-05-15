@@ -241,7 +241,7 @@ data:
           "isShared": false,
           "clientId": "xxxxxxxxxxxxxxxx",
           "clientSecret": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-          "redirectUris": ["https://lobe.west-beta.ts.net/api/auth/callback/casdoor"],
+          "redirectUris": ["https://lobe.flamorz.com/api/auth/callback/casdoor"],
           "tokenFormat": "JWT",
           "tokenSigningMethod": "",
           "tokenFields": [],

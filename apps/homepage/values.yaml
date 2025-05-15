@@ -10,7 +10,7 @@ homepage:
       enabled: true
       ingressClassName: tailscale
       hosts:
-        - host: &host home.west-beta.ts.net
+        - host: &host home.flamorz.com
           paths:
             - path: /
               pathType: Prefix
@@ -50,108 +50,108 @@ homepage:
               - href: http://192.168.3.254/
                 icon: unifi.svg
           - NAS:
-              - href: https://nas.west-beta.ts.net:5001
+              - href: https://nas.flamorz.com:5001
                 icon: qnap-alt.svg
     services:
       - Popular:
           - Jellyfin:
-              href: https://jellyfin.west-beta.ts.net
+              href: https://jellyfin.flamorz.com
               description: Media system (movies, music, etc.)
               icon: jellyfin.svg
           - Jellyseerr:
-              href: https://jellyseerr.west-beta.ts.net
+              href: https://jellyseerr.flamorz.com
               description: Request media
               icon: jellyseerr.svg
           - Paperless:
-              href: https://paperless.west-beta.ts.net
+              href: https://paperless.flamorz.com
               description: Document management system
               icon: paperless.svg
           - TTRss:
-              href: https://ttrss.west-beta.ts.net
+              href: https://ttrss.flamorz.com
               description: RSS reader
               icon: tinytinyrss.png
       - Management:
           - Transmission:
-              href: https://transmission.west-beta.ts.net
+              href: https://transmission.flamorz.com
               description: Bittorrent client
               icon: transmission.svg
           - Prowlarr:
-              href: https://prowlarr.west-beta.ts.net
+              href: https://prowlarr.flamorz.com
               description: Indexer manager
               icon: prowlarr.svg
           - Radarr:
-              href: https://radarr.west-beta.ts.net
+              href: https://radarr.flamorz.com
               description: Movie manager
               icon: radarr.svg
           - Sonarr:
-              href: https://sonarr.west-beta.ts.net
+              href: https://sonarr.flamorz.com
               description: TV show manager
               icon: sonarr.svg
           - Kanidm:
-              href: https://auth.west-beta.ts.net
+              href: https://auth.flamorz.com
               description: Identity management
-              icon: https://auth.west-beta.ts.net/pkg/img/logo-square.svg
+              icon: https://auth.flamorz.com/pkg/img/logo-square.svg
       - Development:
           - Gitea:
-              href: https://git.west-beta.ts.net
+              href: https://git.flamorz.com
               description: Git forge
               icon: gitea.svg
           - Woodpecker:
-              href: https://ci.west-beta.ts.net
+              href: https://ci.flamorz.com
               description: Continuous integration
               icon: woodpecker-ci.svg
           - ArgoCD:
-              href: https://argocd.west-beta.ts.net
+              href: https://argocd.flamorz.com
               description: Continuous deployment
               icon: argocd.svg
           - Registry:
-              href: https://registry.west-beta.ts.net
+              href: https://registry.flamorz.com
               description: Container registry
               icon: docker.svg
           - Grafana:
-              href: https://grafana.west-beta.ts.net
+              href: https://grafana.flamorz.com
               description: Observability dashboards
               icon: grafana.svg
       - Utilities:
           - Excalidraw:
-              href: https://draw.west-beta.ts.net
+              href: https://draw.flamorz.com
               description: Virtual whiteboard
               icon: excalidraw.svg
           - Speedtest:
-              href: https://speedtest.west-beta.ts.net
+              href: https://speedtest.flamorz.com
               description: Internal network speed test
               icon: openspeedtest.png
           - LobeChat:
-              href: https://lobe.west-beta.ts.net
+              href: https://lobe.flamorz.com
               description: An open-source, modern-design AI chat framework. Supports Multi AI Providers
               icon: https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/light/lobehub-color.png
       - Ops:
           - Hubble:
-              href: https://hubble.west-beta.ts.net
+              href: https://hubble.flamorz.com
               description: Cilium network observer
               icon: cilium.svg
           - Rook:
-              href: https://rook-ceph-dashboard.west-beta.ts.net
+              href: https://rook-ceph-dashboard.flamorz.com
               description: Storage manager
               icon: rook.svg
           - Prometheus:
-              href: https://prometheus.west-beta.ts.net
+              href: https://prometheus.flamorz.com
               description: Cloud native metrics
               icon: prometheus.svg
           - AlertManager:
-              href: https://alertmanager.west-beta.ts.net
+              href: https://alertmanager.flamorz.com
               description: Alert manager
               icon: alertmanager.svg
           - KubeExplorer:
-              href: https://kube-explorer.west-beta.ts.net
+              href: https://kube-explorer.flamorz.com
               description: CNRancher K8s Dashboard
               icon: rancher.svg
           - HelmDashboard:
-              href: https://helm-dashboard.west-beta.ts.net
+              href: https://helm-dashboard.flamorz.com
               description: Helm dashboard
               icon: helm.svg
           - Semaphore:
-              href: https://semaphore.west-beta.ts.net
+              href: https://semaphore.flamorz.com
               description: UI for Ansible/Terraform
               icon: semaphore.svg
     widgets:
@@ -180,7 +180,7 @@ homepage:
       hideVersion: true
       fiveColumns: true
   env:
-    HOMEPAGE_ALLOWED_HOSTS: home.west-beta.ts.net
+    HOMEPAGE_ALLOWED_HOSTS: home.flamorz.com
   resources:
     requests:
       cpu: 64m

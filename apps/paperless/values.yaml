@@ -12,7 +12,7 @@ app-template:
           env:
             PAPERLESS_PORT: 8000
             PAPERLESS_ADMIN_USER: admin
-            PAPERLESS_URL: https://paperless.west-beta.ts.net
+            PAPERLESS_URL: https://paperless.flamorz.com
           envFrom:
             - secret: "{{ .Release.Name }}-secret"
           probes:
@@ -41,7 +41,7 @@ app-template:
       enabled: true
       className: tailscale
       hosts:
-        - host: &host paperless.west-beta.ts.net
+        - host: &host paperless.flamorz.com
           paths:
             - path: /
               pathType: Prefix

@@ -42,7 +42,7 @@ app-template:
       enabled: true
       className: tailscale
       hosts:
-        - host: &host kube-explorer.west-beta.ts.net
+        - host: &host kube-explorer.flamorz.com
           paths:
             - path: /
               pathType: Prefix

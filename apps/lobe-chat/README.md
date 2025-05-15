@@ -38,11 +38,11 @@ ingress:
         tailscale.com/experimental-forward-cluster-traffic-via-ingress: "true"
     enabled: true
     hosts:
-        - minio.west-beta.ts.net
+        - minio.flamorz.com
     ingressClassName: tailscale
     tls:
         - hosts:
-            - minio.west-beta.ts.net
+            - minio.flamorz.com
 mode: standalone
 persistence:
     size: 100Gi
@@ -77,8 +77,8 @@ Explanation:
 
 #### casdoor
 
-- Modify `redirectUris` in the `cm` file to the official address: `https://lobe.west-beta.ts.net...`
-- Modify `origin: https://casdoor.west-beta.ts.net` in the `env` of the `deploy` file (because it needs to be accessed from the browser side).
+- Modify `redirectUris` in the `cm` file to the official address: `https://lobe.flamorz.com...`
+- Modify `origin: https://casdoor.flamorz.com` in the `env` of the `deploy` file (because it needs to be accessed from the browser side).
 - Add `casdoor-ingress.yaml` to create Tailscale Ingress. Add `forward-cluster-traffic-via-ingress` because it also needs to be accessed within the cluster.
 - Add `casdoor-externalservice.yaml` because it also needs to be accessed within the cluster.
 
@@ -90,11 +90,11 @@ Explanation:
 #### lobe
 
 - Modify `env` in the `deploy` file:
-  - `APP_URL: https://lobe.west-beta.ts.net`
-  - `AUTH_CASDOOR_ISSUER: https://casdoor.west-beta.ts.net`
-  - `NEXTAUTH_URL: https://lobe.west-beta.ts.net/api/auth` (change `AUTH_URL` to `NEXTAUTH_URL`)
-  - `S3_ENDPOINT: https://minio.west-beta.ts.net`
-  - `S3_PUBLIC_DOMAIN: https://minio.west-beta.ts.net` (different for public clouds, this should be your own domain)
+  - `APP_URL: https://lobe.flamorz.com`
+  - `AUTH_CASDOOR_ISSUER: https://casdoor.flamorz.com`
+  - `NEXTAUTH_URL: https://lobe.flamorz.com/api/auth` (change `AUTH_URL` to `NEXTAUTH_URL`)
+  - `S3_ENDPOINT: https://minio.flamorz.com`
+  - `S3_PUBLIC_DOMAIN: https://minio.flamorz.com` (different for public clouds, this should be your own domain)
   - `OLLAMA_PROXY_URL: http://ollama.ollama:11434`
   - `DEFAULT_FILES_CONFIG: embedding_model=embedding_model=zhipu/embedding-3`
   - Similar to casdoor, also create ingress and externalservice
@@ -140,8 +140,8 @@ Emphasize again that lobe/casdoor/minio need to ensure that the domain name can 
 ### Testing and Verification
 
 1. Access MinIO console (via pod ip:9001)
-2. Access Casdoor: <https://casdoor.west-beta.ts.net>
-3. Access Lobe: <https://lobe.west-beta.ts.net>
+2. Access Casdoor: <https://casdoor.flamorz.com>
+3. Access Lobe: <https://lobe.flamorz.com>
 4. Log in to Lobe (verify ["Authentication"](https://lobehub.com/zh/docs/self-hosting/environment-variables/auth) related services)
 5. Chat using DeepSeek SaaS service (verify ["Model Provider"](https://lobehub.com/zh/docs/self-hosting/environment-variables/model-provider) related functions)
 6. Chat using local Ollama model (verify if Ollama has started normally and Lobe is correctly configured)

@@ -31,7 +31,7 @@ app-template:
       enabled: true
       className: tailscale
       hosts:
-        - host: &host drop.west-beta.ts.net
+        - host: &host drop.flamorz.com
           paths:
             - path: /
               pathType: Prefix

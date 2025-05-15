@@ -16,5 +16,5 @@ repositories:
     owner: ops
     private: false
     migrate:
-      source: https://github.com/east4ming/homelab2
+      source: https://github.com/AmorimMG/homelab
       mirror: false

@@ -32,7 +32,7 @@ app-template:
       enabled: true
       className: tailscale
       hosts:
-        - host: &host speedtest.west-beta.ts.net
+        - host: &host speedtest.flamorz.com
           paths:
             - path: /
               pathType: Prefix

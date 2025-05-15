@@ -6,11 +6,11 @@ minio:
       tailscale.com/experimental-forward-cluster-traffic-via-ingress: "true"
     enabled: true
     hosts:
-      - minio.west-beta.ts.net
+      - minio.flamorz.com
     ingressClassName: tailscale
     tls:
       - hosts:
-          - minio.west-beta.ts.net
+          - minio.flamorz.com
   mode: standalone
   persistence:
     size: 100Gi

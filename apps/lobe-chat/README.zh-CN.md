@@ -38,11 +38,11 @@ ingress:
         tailscale.com/experimental-forward-cluster-traffic-via-ingress: "true"
     enabled: true
     hosts:
-        - minio.west-beta.ts.net
+        - minio.flamorz.com
     ingressClassName: tailscale
     tls:
         - hosts:
-            - minio.west-beta.ts.net
+            - minio.flamorz.com
 mode: standalone
 persistence:
     size: 100Gi
@@ -77,8 +77,8 @@ replicas: 1
 
 #### casdoor
 
-- 修改 `cm` 文件中的 `redirectUris`, 改为正式地址: `https://lobe.west-beta.ts.net...`
-- 修改 `deploy` 文件中的 `env` 中的 `origin: https://casdoor.west-beta.ts.net` (因为需要浏览器端访问, 所以需要修改)
+- 修改 `cm` 文件中的 `redirectUris`, 改为正式地址: `https://lobe.flamorz.com...`
+- 修改 `deploy` 文件中的 `env` 中的 `origin: https://casdoor.flamorz.com` (因为需要浏览器端访问, 所以需要修改)
 - 新增 `casdoor-ingress.yaml`, 创建 tailscale ingress. 添加 `forward-cluster-traffic-via-ingress`, 因为集群内也要访问.
 - 新增 `casdoor-externalservice.yaml`, 因为集群内也要访问.
 
@@ -90,11 +90,11 @@ replicas: 1
 #### lobe
 
 - 修改 `deploy` 文件中的 `env` 中的:
-  - `APP_URL: https://lobe.west-beta.ts.net`
-  - `AUTH_CASDOOR_ISSUER: https://casdoor.west-beta.ts.net`
-  - `NEXTAUTH_URL: https://lobe.west-beta.ts.net/api/auth` (`AUTH_URL` 改为 `NEXTAUTH_URL`)
-  - `S3_ENDPOINT: https://minio.west-beta.ts.net`
-  - `S3_PUBLIC_DOMAIN: https://minio.west-beta.ts.net` (如果是公有云, 则不同, 这个应为自己的域名)
+  - `APP_URL: https://lobe.flamorz.com`
+  - `AUTH_CASDOOR_ISSUER: https://casdoor.flamorz.com`
+  - `NEXTAUTH_URL: https://lobe.flamorz.com/api/auth` (`AUTH_URL` 改为 `NEXTAUTH_URL`)
+  - `S3_ENDPOINT: https://minio.flamorz.com`
+  - `S3_PUBLIC_DOMAIN: https://minio.flamorz.com` (如果是公有云, 则不同, 这个应为自己的域名)
   - `OLLAMA_PROXY_URL: http://ollama.ollama:11434`
   - `DEFAULT_FILES_CONFIG: embedding_model=embedding_model=zhipu/embedding-3`
   - 与 casdoor 类似, 也创建 ingress 和 externalservice
@@ -140,8 +140,8 @@ replicas: 1
 ### 测试及验证
 
 1. 访问 minio console(通过 pod ip:9001)
-2. 访问 casdoor: <https://casdoor.west-beta.ts.net>
-3. 访问 lobe: <https://lobe.west-beta.ts.net>
+2. 访问 casdoor: <https://casdoor.flamorz.com>
+3. 访问 lobe: <https://lobe.flamorz.com>
 4. 登录 lobe(验证 ["身份验证"](https://lobehub.com/zh/docs/self-hosting/environment-variables/auth) 相关服务)
 5. 使用 deepseek saas 服务聊天 (验证 ["模型服务商"](https://lobehub.com/zh/docs/self-hosting/environment-variables/model-provider) 相关功能)
 6. 使用 本地 ollama 模型聊天 (验证 ollama 是否已正常启动并且 lobe 已正确配置.)

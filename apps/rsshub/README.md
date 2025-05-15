@@ -79,7 +79,7 @@ Start all Deploys.
 
 ### 7. Modify TTRss Feed Settings
 
-Log in to the TTRss domain: `ttrss.west-beta.ts.net`, go to: **Preferences** -> **Feed Settings** -> check one by one, change the **URL** from `https://rss.ewhisper.cn...` to: `https://rss.west-beta.ts.net...`
+Log in to the TTRss domain: `ttrss.flamorz.com`, go to: **Preferences** -> **Feed Settings** -> check one by one, change the **URL** from `https://rss.ewhisper.cn...` to: `https://rss.flamorz.com...`
 
 ### 8. Verification
 

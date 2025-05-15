@@ -24,7 +24,7 @@ app-template:
                 periodSeconds: 5
           env:
             - name: TZ
-              value: Asia/Shanghai
+              value: America/Sao_Paulo
             - name: SEMAPHORE_PORT
               value: ":3000"
             - name: SEMAPHORE_ACCESS_KEY_ENCRYPTION
@@ -48,7 +48,7 @@ app-template:
             - name: SEMAPHORE_EMAIL_ALERT
               value: "true"
             - name: SEMAPHORE_WEB_ROOT
-              value: https://semaphore.west-beta.ts.net
+              value: https://semaphore.flamorz.com
       initContainers:
         chmod-chown-dir:
           image:
@@ -94,7 +94,7 @@ app-template:
       enabled: true
       className: tailscale
       hosts:
-        - host: &host semaphore.west-beta.ts.net
+        - host: &host semaphore.flamorz.com
           paths:
             - path: /
               pathType: Prefix

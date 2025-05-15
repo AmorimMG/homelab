@@ -8,7 +8,7 @@ helm-dashboard:
     enabled: true
     className: "tailscale"
     hosts:
-      - host: &host helm-dashboard.west-beta.ts.net
+      - host: &host helm-dashboard.flamorz.com
         paths:
           - path: /
             pathType: Prefix

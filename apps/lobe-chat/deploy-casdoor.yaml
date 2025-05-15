@@ -38,7 +38,7 @@ spec:
             - name: driverName
               value: postgres
             - name: origin
-              value: https://casdoor.west-beta.ts.net
+              value: https://casdoor.flamorz.com
             - name: runmode
               value: dev
           image: casbin/casdoor:v1.840.0

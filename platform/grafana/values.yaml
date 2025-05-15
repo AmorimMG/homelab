@@ -6,7 +6,7 @@ grafana:
     enabled: true
     ingressClassName: tailscale
     hosts:
-      - &host grafana.west-beta.ts.net
+      - &host grafana.flamorz.com
     tls:
       - hosts:
           - *host
@@ -27,7 +27,7 @@ grafana:
   envFromSecret: grafana-secrets
   grafana.ini:
     server:
-      root_url: https://grafana.west-beta.ts.net
+      root_url: https://grafana.flamorz.com
     auth.generic_oauth:
       enabled: true
       allow_sign_up: true
@@ -36,9 +36,9 @@ grafana:
       client_id: grafana-sso
       client_secret: $__env{GRAFANA_SSO_CLIENT_SECRET}
       scopes: openid profile email groups
-      auth_url: https://dex.west-beta.ts.net/auth
-      token_url: https://dex.west-beta.ts.net/token
-      api_url: https://dex.west-beta.ts.net/userinfo
+      auth_url: https://dex.flamorz.com/auth
+      token_url: https://dex.flamorz.com/token
+      api_url: https://dex.flamorz.com/userinfo
   persistence:
     enabled: true
     size: 1Gi
