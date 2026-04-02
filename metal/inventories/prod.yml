@@ -1,15 +1,16 @@
 all:
   vars:
-    control_plane_endpoint: 192.168.1.100
+    # Escolha um IP livre na sua rede 192.168.0.x para ser o VIP do cluster.
+    # Alterei de 1.104 para 0.104 para ficar na mesma sub-rede das suas máquinas.
+    control_plane_endpoint: 192.168.0.104 
     load_balancer_ip_pool:
-      - 192.168.0.224/27
+      - 192.168.0.224/27 # Garanta que o DHCP do seu roteador não está entregando IPs neste range
 metal:
   children:
     masters:
       hosts:
-        metal0: {ansible_host: 192.168.1.110, mac: '00:23:24:d1:f5:69', disk: sda, network_interface: eno1}
-        metal1: {ansible_host: 192.168.1.111, mac: '00:23:24:d1:f3:f0', disk: sda, network_interface: eno1}
-        metal2: {ansible_host: 192.168.1.112, mac: '00:23:24:e7:04:60', disk: sda, network_interface: eno1}
+        harry: {ansible_host: 192.168.0.100, mac: '94:c6:91:39:d5:df', disk: nvme0n1, network_interface: enp1s0f0}
+        hermione: {ansible_host: 192.168.0.101, mac: '10:e7:c6:c4:68:e0', disk: nvme0n1, network_interface: eth0}
+        ron: {ansible_host: 192.168.0.102, mac: 'f4:4d:30:8e:85:19', disk: nvme0n1, network_interface: eth0}
     workers:
-      hosts:
-        metal3: {ansible_host: 192.168.1.113, mac: '00:23:24:d1:f4:d6', disk: sda, network_interface: eno1}
+      hosts: {} # Como você tem 3 nós, deixamos a lista de workers dedicada vazia.
